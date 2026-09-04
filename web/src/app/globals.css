@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Ozarha Behavioral Health — design tokens
+   Palette source: client "Timeless Classic" board.
+     #333333 charcoal · #A48B3D brass · #E6E6FA lavender · #0B300E forest
+   The board's own warm off-white ground is added as --color-ground;
+   it is the surface the whole site sits on.
+   ============================================================ */
+@theme {
+  /* Surfaces */
+  --color-ground:      #f2f0ea; /* warm off-white — 60% of the page */
+  --color-ground-deep: #e8e5db; /* recessed warm neutral */
+  --color-lavender:    #e6e6fa; /* client palette — surface tint only */
+  --color-lavender-warm:#eceaf6; /* temperature-corrected variant */
+
+  /* Ink */
+  --color-ink:      #333333; /* client palette — body copy, 11.1:1 on ground */
+  --color-ink-soft: #5c584f; /* secondary copy, 7.0:1 on ground */
+
+  /* Primary */
+  --color-forest:       #0b300e; /* client palette — 12.8:1 on ground */
+  --color-forest-lift:  #14421a; /* hover */
+  --color-forest-veil:  #0a2a0d; /* deep sections */
+
+  /* Accent — three tints so brass never fails contrast.
+     Raw #A48B3D is only 2.9:1 on ground: decorative use ONLY. */
+  --color-brass:      #a48b3d; /* rules, fills, non-informational marks */
+  --color-brass-text: #7c6529; /* brass-coloured TEXT on light — 4.9:1  */
+  --color-brass-lift: #c6a94f; /* brass on forest — 6.4:1 */
+
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --tracking-eyebrow: 0.18em;
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  ::selection { background: var(--color-forest); color: var(--color-ground); }
+  :focus-visible {
+    outline: 2px solid var(--color-brass-text);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-brass-text);
+  }
+  .display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    line-height: 1.06;
+    letter-spacing: -0.021em;
+    font-variation-settings: "SOFT" 30, "WONK" 0;
+    color: var(--color-forest);
+    text-wrap: balance;
+  }
+  .measure { max-width: 34rem; }
+  .rule { height: 1px; background: color-mix(in srgb, var(--color-brass) 38%, transparent); }
+}
+
+/* Scroll reveal — respects reduced motion */
+.reveal { opacity: 0; transform: translateY(18px); }
+.reveal-in {
+  opacity: 1; transform: none;
+  transition: opacity 1s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-in { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
