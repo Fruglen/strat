@@ -24,10 +24,19 @@ export default function SiteFooter() {
             <ul className="mt-5 space-y-2.5 text-sm text-ground/72">
               <li>{practice.contact.phone}</li>
               <li>{practice.contact.email}</li>
-              <li className="pt-1 text-ground/50">
-                {practice.provider.licensedIn}
-              </li>
             </ul>
+
+            <address className="mt-6 text-sm leading-relaxed not-italic text-ground/72">
+              {practice.office.lines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </address>
+
+            <p className="mt-4 text-sm text-ground/50">
+              In person, and by video across {practice.provider.licensedIn}.
+            </p>
           </div>
 
           <div>

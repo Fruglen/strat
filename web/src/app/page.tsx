@@ -8,6 +8,7 @@ import {
   practice,
   services,
   steps,
+  visitTypes,
 } from "@/content/practice";
 
 export default function Home() {
@@ -75,6 +76,49 @@ export default function Home() {
                   <p className="mt-4 max-w-[36ch] text-[15px] leading-relaxed text-ink-soft">
                     {pillar.body}
                   </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── How to be seen ───────────────────────────────────── */}
+        <section id="visits" className="bg-ground-deep px-6 py-24 lg:px-10 lg:py-32">
+          <div className="mx-auto max-w-[78rem]">
+            <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-20">
+              {visitTypes.map((visit, i) => (
+                <Reveal key={visit.kind} delay={i * 120}>
+                  <p className="eyebrow">{visit.kind}</p>
+                  <h2 className="display mt-5 text-[clamp(1.7rem,3vw,2.3rem)]">
+                    {visit.title}
+                  </h2>
+                  <p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-ink-soft">
+                    {visit.body}
+                  </p>
+
+                  {"note" in visit && visit.note ? (
+                    <p className="mt-7 max-w-[38ch] border-t border-brass/25 pt-6 text-[14px] leading-relaxed text-ink-soft">
+                      {visit.note}
+                    </p>
+                  ) : null}
+
+                  {visit.kind === "In person" && (
+                    <address className="mt-7 text-[15px] leading-relaxed not-italic text-forest">
+                      {practice.office.lines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                      <a
+                        href={practice.office.mapsUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-3 inline-block text-[13px] text-brass-text underline underline-offset-4 transition-colors hover:text-forest"
+                      >
+                        Open in Maps
+                      </a>
+                    </address>
+                  )}
                 </Reveal>
               ))}
             </div>

@@ -10,11 +10,24 @@ export const practice = {
   legalName: "Ozarha Behavioral Health, LLC",
   shortName: "Ozarha",
 
-  // PLACEHOLDER — awaiting provider name, credentials, licensure
+  // PLACEHOLDER — awaiting provider name and credentials
   provider: {
     name: "PLACEHOLDER — Provider Name",
     credentials: "PLACEHOLDER — Credentials",
-    licensedIn: "PLACEHOLDER — State(s)",
+    licensedIn: "Maryland",
+  },
+
+  office: {
+    street: "1300 Mercantile Lane",
+    suite: "Suite 129-22",
+    city: "Largo",
+    state: "MD",
+    zip: "20774",
+    lines: ["1300 Mercantile Lane", "Suite 129-22", "Largo, MD 20774"],
+    oneLine: "1300 Mercantile Lane, Suite 129-22, Largo, MD 20774",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent("1300 Mercantile Lane, Suite 129-22, Largo, MD 20774"),
   },
 
   // PLACEHOLDER — awaiting real contact details
@@ -25,7 +38,7 @@ export const practice = {
   },
 
   promise:
-    "Comprehensive psychiatric evaluation and medication management, delivered with a patient-centered, holistic approach — for every stage of life.",
+    "Comprehensive psychiatric evaluation and medication management, delivered with a patient-centered, holistic approach — for every stage of life. In person in Largo, or by video anywhere in Maryland.",
 } as const;
 
 export const pillars = [
@@ -129,5 +142,19 @@ export const steps = [
   {
     title: "Ongoing care",
     body: "A plan you understand and agreed to, reviewed as things change — because they will.",
+  },
+] as const;
+
+export const visitTypes = [
+  {
+    kind: "In person",
+    title: "A room in Largo.",
+    body: "Appointments at the Largo office, for anyone who would rather do this face to face — first evaluations included.",
+  },
+  {
+    kind: "Virtual",
+    title: "Or wherever you are in Maryland.",
+    body: "Secure video appointments for anyone licensed care can reach across the state. The same unhurried conversation, from your own room.",
+    note: "A private link arrives before your appointment — nothing to install, and no waiting room to sit in.",
   },
 ] as const;
