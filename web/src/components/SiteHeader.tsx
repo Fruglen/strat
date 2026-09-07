@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { practice } from "@/content/practice";
 
 const nav = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "What We Treat", href: "#conditions" },
-  { label: "What to Expect", href: "#expect" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "What to Expect", href: "/what-to-expect" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function SiteHeader() {
+  const pathname = usePathname();
   const [settled, setSettled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -45,24 +48,29 @@ export default function SiteHeader() {
         }`}
       >
         <div className="mx-auto flex max-w-[78rem] items-center justify-between gap-4 px-6 lg:px-10">
-          <a href="#top" onClick={() => setOpen(false)} className="shrink-0">
+          <Link href="/" onClick={() => setOpen(false)} className="shrink-0">
             <span className="block font-display text-[0.95rem] tracking-[0.30em] text-forest uppercase md:text-[1.05rem]">
               Ozarha
             </span>
             <span className="mt-0.5 block text-[9px] tracking-[0.24em] whitespace-nowrap text-ink-soft uppercase">
               Behavioral Health
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
             {nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
-                className="text-[13px] text-ink-soft transition-colors hover:text-forest"
+                aria-current={pathname === item.href ? "page" : undefined}
+                className={`text-[13px] transition-colors hover:text-forest ${
+                  pathname === item.href
+                    ? "text-forest underline decoration-brass decoration-1 underline-offset-[6px]"
+                    : "text-ink-soft"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -95,14 +103,17 @@ export default function SiteHeader() {
       >
         <nav className="flex flex-col" aria-label="Primary mobile">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="display border-t border-brass/25 py-6 text-[1.75rem]"
+              aria-current={pathname === item.href ? "page" : undefined}
+              className={`display border-t border-brass/25 py-6 text-[1.75rem] ${
+                pathname === item.href ? "text-brass-text" : ""
+              }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

@@ -158,3 +158,55 @@ export const visitTypes = [
     note: "A private link arrives before your appointment — nothing to install, and no waiting room to sit in.",
   },
 ] as const;
+
+/** Interior-page copy. DRAFT — needs the provider's voice and clinical sign-off. */
+export const about = {
+  intro:
+    "PLACEHOLDER — her opening paragraph, first person. What drew her to psychiatry, and what she believes care should feel like.",
+  paragraphs: [
+    "PLACEHOLDER — her training and path: where she studied, where she has practiced, and what she learned there that shaped how she works now.",
+    "PLACEHOLDER — how she actually practices. What a person can expect from sitting with her: pace, listening, how decisions get made, how much say the patient has.",
+    "PLACEHOLDER — who she works best with, and why. This is where a prospective patient decides she is the right person for them.",
+  ],
+  beliefs: [
+    {
+      title: "Medication is a tool, not the plan",
+      body: "It has a place, often an important one. But a prescription written without understanding the life around it rarely holds.",
+    },
+    {
+      title: "The first appointment is not a formality",
+      body: "A comprehensive evaluation takes the time it takes. Most of what matters comes out in the parts that cannot be rushed.",
+    },
+    {
+      title: "You should understand your own care",
+      body: "What you are taking, why, what to watch for, and what happens next. If any of that is unclear, something has gone wrong.",
+    },
+  ],
+} as const;
+
+export const faqs = [
+  {
+    q: "How long is the first appointment?",
+    a: "PLACEHOLDER — confirm duration. The comprehensive diagnostic evaluation is longer than a routine visit, because it is where the whole history gets heard.",
+  },
+  {
+    q: "Do you take insurance?",
+    a: "PLACEHOLDER — insurance carriers, private-pay rates, or both. This needs to be answered plainly here so nobody arrives with the wrong expectation.",
+  },
+  {
+    q: "Can I be seen by video?",
+    a: "Yes. Appointments are available in person at the Largo office or by secure video anywhere in Maryland. Care must be provided within the state where the patient is physically located at the time of the appointment.",
+  },
+  {
+    q: "Do you see children?",
+    a: "Care is offered across the lifespan — children, adolescents, adults, and older adults. PLACEHOLDER — confirm the youngest age seen.",
+  },
+  {
+    q: "Do you prescribe controlled substances?",
+    a: "PLACEHOLDER — her policy on stimulants and other controlled medications, including any requirements for in-person visits. Worth stating clearly; people ask before they book.",
+  },
+  {
+    q: "What should I bring to the first visit?",
+    a: "A photo ID, your insurance card if you are using insurance, a list of any medications you currently take, and records from prior treatment if you have them. None of it is a prerequisite — come anyway.",
+  },
+] as const;
