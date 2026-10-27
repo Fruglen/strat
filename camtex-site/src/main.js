@@ -491,7 +491,7 @@ $$('.fig b[data-count]').forEach((el) => {
       window.location.href = `mailto:${email}?subject=${encodeURIComponent('Project inquiry — ' + types)}&body=${encodeURIComponent(body)}`;
       status.textContent = 'Opening your email app…';
     } else {
-      status.textContent = 'Online submissions are not connected yet — please call (956) 240-4657.';
+      status.textContent = 'Online requests are not set up yet. Please call us at (956) 240-4657.';
     }
   });
 }
