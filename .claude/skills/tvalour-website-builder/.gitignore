@@ -1,0 +1,50 @@
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.log
+
+# Node, if a build ever needs it
+node_modules/
+
+# Client work stays local. Every build folder is git-ignored except the keep
+# marker, because builds/ holds real business facts, real assets, and real
+# client conversations - none of which belong in a public fork.
+builds/*/
+!builds/.gitkeep
+
+# Local scratch
+tmp/
+
+# A shelf for finished sites, from an earlier layout of this repo. Nothing in the
+# pipeline writes here any more - builds/ is the working folder - but the line
+# stays because the cost of keeping it is zero and the cost of dropping it is a
+# folder of real client sites landing in a public fork. Ignore rules for paths
+# holding client work are cheap; removing one is the sort of tidy-up that only
+# looks harmless until it isn't.
+sites/
+
+# Your own stage-00 answers, including your name and email. config.example.md is
+# the shipped template; this is the filled-in copy and it is yours, not the
+# repo's. On a fork where a team genuinely wants one shared set of defaults,
+# delete this line and commit it.
+config.md
+
+# The studio layer: your standing rules, your rejection ledger, your direction
+# log. It carries the words real clients used about real work, so the filled-in
+# files are yours and stay local - the README and the examples ship, and they are
+# what a fork starts from.
+studio/*.md
+!studio/README.md
+!studio/*.example.md
+
+# The front door. Everything a person drops into drop/ is theirs - a logo, their
+# photographs, a scan of their price list - and none of it belongs in a public
+# fork, so the contents are ignored and only the folder scaffolding is tracked.
+# Same reasoning as builds/ above; this one just has to survive being visible,
+# because a drop folder nobody can see is the defect it exists to fix.
+drop/**
+!drop/**/
+!drop/README.md
+!drop/*/README.md

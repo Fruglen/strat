@@ -1,0 +1,45 @@
+Read AGENTS.md before anything else — it is the full operating contract for this
+repository. This folder builds websites through a 9-stage pipeline with a
+zero-dependency checker; the harness you are running in has no hook enforcement,
+so the contract binds you by discipline.
+
+The floor, not a summary:
+1. Any request to build/redesign/remake a website starts at stage 01 discover
+   (run `node start.mjs "<name>"`, then stages/01_discover/CONTEXT.md) — ask for
+   what is in the person's head (sketches, screenshots, references, brand
+   colours and fonts) and for the facts, before any design or code exists.
+   73 questions in stages/01_discover/questions.md; ask every BLOCKING one.
+   57b asks the TRADE. Write it in facts.md as a | Sector | row; "none" is a real answer.
+   `node checks/brief.mjs builds/<slug>` says whether discovery actually
+   happened. Its output is questions to go and ask, never boxes to fill in.
+2. Never invent a fact about a real business: every claim traces to a sourced
+   row in builds/<slug>/facts.md.
+3. Never publish a file with no traceable origin. Their material goes in drop/
+   (repo root: logo, photos, brand, fonts, docs, reference - it is there before
+   any build exists, so give them that path); `node assets.mjs <slug> scan`
+   moves it into the build and writes builds/<slug>/assets/MANIFEST.md. Every
+   image on a page needs a row with a Source and a Rights answer in the
+   client's own words. `node assets.mjs` alone says what is waiting in drop/.
+4. Two defaults are OFF and stay off unless brief.md says otherwise:
+   `- **Motion:** none` and `- **Imagery:** client-assets-only`. Having an
+   image generator is not permission; the client asking for it is.
+5. The country is a file, and there is no default. Question 57 asks which
+   country the business trades under; profiles/ must have it, or you research
+   one (profiles/README.md) or use intl-baseline and say so. Never run the
+   nearest country's law.
+6. Site files go only in builds/<slug>/site/, and only after brief.md, facts.md
+   and design.md exist.
+7. The gate decides: `node checks/run.mjs builds/<slug>/site --facts
+   builds/<slug>/facts.md`. Exit 0 ships; exit 1 does not; never --skip.
+8. Stop and talk to the human at stages 01, 04, 06, 07 — and 08.
+9. Launch is not the end. Once a site is live (STATE.md says LAUNCHED), every
+   change happens inside a numbered ROUND in builds/<slug>/CHANGELOG.md: what
+   they asked in THEIR OWN WORDS, what changed, what you deliberately did not
+   change and why, then the gate's verdict. Open the round BEFORE the first
+   edit, not afterwards. `node checks/round.mjs builds/<slug>` checks it, and
+   stages/08_revise/CONTEXT.md is the stage. Three rounds circling one area
+   means the DESIGN is wrong there, not the detail — say so.
+   Editing a legal profile? `node checks/citations.mjs` too - it checks how the law was
+   sourced, and it fails on an unclassified citation or an unanswered coverage question.
+
+Resuming? Read builds/*/STATE.md first and continue from its Next action line.

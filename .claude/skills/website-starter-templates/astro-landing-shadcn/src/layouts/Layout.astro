@@ -1,0 +1,36 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '@/styles/globals.css'
+import Header from '@/components/v1/landing/header.astro';
+import Footer from '@/components/v1/landing/footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="A starter template for AstroJS landing & Auth page with tailwindcss, typescript, shadcn ui" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Astro Landing + Auth Page Starter Kit">
+		<meta property="og:url" content="https://emamalias.github.io/astro-landing-starter/">
+		<meta property="og:image" content="https://res.cloudinary.com/dians3nj8/image/upload/v1719284127/astro_landing_starter_social_9176dbfeb4.png">
+		<meta property="og:description" content="Astro landing page starter kit with React, Tailwind, Vite, ShadCN UI">
+		<title>{title}</title>
+	</head>
+	<body class="antialiased">
+		<div class="flex flex-col min-h-[100dvh]">
+			<Header />
+			<main class="flex-1">
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "enabledPlugins": {
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "frontend-design-audit@frontend-design-audit": true,
+    "anti-slop-design@anti-slop-design": true,
+    "web-designer@web-designer-marketplace": true,
+    "premium-saas-web@middlesugar7000": true,
+    "ultimate-frontend-skills@ultimate-frontend-skills": true,
+    "nateherk-design@nateherk": true,
+    "site-builder@string-os": true,
+    "web-design-pack@web-design-skills": true,
+    "dev-browser@n-skills": true,
+    "openai-playwright@skills-curated": true,
+    "openai-screenshot@skills-curated": true,
+    "openai-cloudflare-deploy@skills-curated": true,
+    "openai-netlify-deploy@skills-curated": true,
+    "humanizer@skills-curated": true,
+    "design-mastery@libreuiux": true,
+    "archetypal-alchemy@libreuiux": true,
+    "accessibility-compliance@libreuiux": true,
+    "seo-technical-optimization@libreuiux": true,
+    "seo-content-creation@libreuiux": true,
+    "frontend-mobile-development@libreuiux": true,
+    "vibe-coding@libreuiux": true,
+    "taste-skill@claude-skills": true,
+    "frontend-slides@claude-skills": true,
+    "frontend-design-pro@buildwithclaude": true,
+    "agents-design-experience@buildwithclaude": true,
+    "uxkin@buildwithclaude": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "frontend-design-audit": {
+      "source": {
+        "source": "github",
+        "repo": "mistyhx/frontend-design-audit"
+      }
+    },
+    "anti-slop-design": {
+      "source": {
+        "source": "github",
+        "repo": "Ferousco-dev/anti-slop-design"
+      }
+    },
+    "web-designer-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "MickeyAlton33/web-designer-plugin"
+      }
+    },
+    "middlesugar7000": {
+      "source": {
+        "source": "github",
+        "repo": "MiddleSugar7000/premium-saas-web-skill"
+      }
+    },
+    "ultimate-frontend-skills": {
+      "source": {
+        "source": "github",
+        "repo": "ridelink0/ultimate-frontend-skills"
+      }
+    },
+    "nateherk": {
+      "source": {
+        "source": "github",
+        "repo": "nateherkai/scroll-craft"
+      }
+    },
+    "string-os": {
+      "source": {
+        "source": "github",
+        "repo": "string-os/site-builder"
+      }
+    },
+    "web-design-skills": {
+      "source": {
+        "source": "github",
+        "repo": "youdovhan/web-design-skills"
+      }
+    },
+    "n-skills": {
+      "source": {
+        "source": "github",
+        "repo": "numman-ali/n-skills"
+      }
+    },
+    "skills-curated": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills-curated"
+      }
+    },
+    "libreuiux": {
+      "source": {
+        "source": "github",
+        "repo": "Ormus-Solutions/LibreUIUX-Claude-Code"
+      }
+    },
+    "claude-skills": {
+      "source": {
+        "source": "github",
+        "repo": "pankaj8121993-web/claude-skills"
+      }
+    },
+    "buildwithclaude": {
+      "source": {
+        "source": "github",
+        "repo": "davepoon/buildwithclaude"
+      }
+    }
+  }
+}

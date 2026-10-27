@@ -1,0 +1,53 @@
+{
+  "skill_name": "billion-dollar-website",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "b2b-saas-minimal",
+      "prompt": "Build me a landing page for Ledgerly, a B2B accounting automation platform for mid-size companies. It syncs with ERPs and closes the books automatically. Save it as a single HTML file.",
+      "expected_output": "A Stripe/Linear-style minimal landing page: light, typography-driven, one accent color, full anatomy from nav to footer.",
+      "files": [],
+      "assertions": [
+        "No placeholder content: the HTML contains no 'lorem ipsum', 'Your Company', 'John Doe', or '[placeholder]' text",
+        "Self-contained single file: no external http(s) scripts, stylesheets, fonts, or images are referenced",
+        "Basic page hygiene: has a <title>, a meta viewport tag, and a favicon",
+        "Responsive design present: CSS uses media queries and/or clamp() for fluid sizing, and the layout adapts at mobile widths",
+        "No emoji used as feature icons anywhere in the page body",
+        "Interactive polish: CSS defines :hover states for buttons/links and respects prefers-reduced-motion",
+        "Complete page anatomy: page includes a nav, a hero section, at least two feature sections, a call-to-action section, and a multi-column footer"
+      ]
+    },
+    {
+      "id": 1,
+      "eval_name": "consumer-hardware-drama",
+      "prompt": "I'm launching Aura, a smart sleep headband that tracks brainwaves and plays adaptive soundscapes. Make me a product landing page as one HTML file. It should feel premium.",
+      "expected_output": "An Apple-style dramatic product page: huge type, cinematic sections, the product as hero, confident short copy.",
+      "files": [],
+      "assertions": [
+        "No placeholder content: the HTML contains no 'lorem ipsum', 'Your Company', 'John Doe', or '[placeholder]' text",
+        "Self-contained single file: no external http(s) scripts, stylesheets, fonts, or images are referenced",
+        "Basic page hygiene: has a <title>, a meta viewport tag, and a favicon",
+        "Responsive design present: CSS uses media queries and/or clamp() for fluid sizing, and the layout adapts at mobile widths",
+        "No emoji used as feature icons anywhere in the page body",
+        "Interactive polish: CSS defines :hover states for buttons/links and respects prefers-reduced-motion",
+        "Complete page anatomy: page includes a nav, a hero section, at least two feature sections, a call-to-action section, and a multi-column footer"
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "dev-infra-dark",
+      "prompt": "make a landing page for our startup 'meshgrid' - it's a globally distributed edge database for AI agents. devs are the audience. single html file pls",
+      "expected_output": "A Vercel-style dark tech page: near-black, glowing accents, grid textures, monospace details, terminal/dashboard mockups.",
+      "files": [],
+      "assertions": [
+        "No placeholder content: the HTML contains no 'lorem ipsum', 'Your Company', 'John Doe', or '[placeholder]' text",
+        "Self-contained single file: no external http(s) scripts, stylesheets, fonts, or images are referenced",
+        "Basic page hygiene: has a <title>, a meta viewport tag, and a favicon",
+        "Responsive design present: CSS uses media queries and/or clamp() for fluid sizing, and the layout adapts at mobile widths",
+        "No emoji used as feature icons anywhere in the page body",
+        "Interactive polish: CSS defines :hover states for buttons/links and respects prefers-reduced-motion",
+        "Complete page anatomy: page includes a nav, a hero section, at least two feature sections, a call-to-action section, and a multi-column footer"
+      ]
+    }
+  ]
+}

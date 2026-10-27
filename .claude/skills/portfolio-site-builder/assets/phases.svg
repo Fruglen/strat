@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="250" viewBox="0 0 1280 250" role="img" aria-labelledby="t">
+  <title id="t">Nine phases: intake, research, decisions, scaffold, pages, SEO/AEO, QA, launch, handover</title>
+  <defs>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#21977c"/>
+      <stop offset="1" stop-color="#ecbd47"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+      @keyframes travel { from { transform: translateX(0); } to { transform: translateX(1088px); } }
+      .dot { animation: travel 9s linear infinite; }
+      @keyframes pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+      @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+    </style>
+  </defs>
+  <rect width="1280" height="250" rx="24" fill="#062520"/>
+  <text x="96" y="52" class="sans" font-size="16" font-weight="700" fill="#f3d27a" letter-spacing="2">THE WORKFLOW</text>
+  <rect x="96" y="118" width="1088" height="4" rx="2" fill="url(#line)" opacity="0.6"/>
+
+  <g class="sans" text-anchor="middle">
+    <g><circle cx="96" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="96" y="127" font-size="20" font-weight="800" fill="#fff">0</text>
+      <text x="96" y="178" font-size="15" font-weight="700" fill="#fff">Intake</text><text x="96" y="198" font-size="12" fill="#7bcfb7">10 questions</text></g>
+    <g><circle cx="232" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="232" y="127" font-size="20" font-weight="800" fill="#fff">1</text>
+      <text x="232" y="178" font-size="15" font-weight="700" fill="#fff">Research</text><text x="232" y="198" font-size="12" fill="#7bcfb7">sourced dossier</text></g>
+    <g><circle cx="368" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="368" y="127" font-size="20" font-weight="800" fill="#fff">2</text>
+      <text x="368" y="178" font-size="15" font-weight="700" fill="#fff">Decisions</text><text x="368" y="198" font-size="12" fill="#7bcfb7">AGENTS.md + log</text></g>
+    <g><circle cx="504" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="504" y="127" font-size="20" font-weight="800" fill="#fff">3</text>
+      <text x="504" y="178" font-size="15" font-weight="700" fill="#fff">Scaffold</text><text x="504" y="198" font-size="12" fill="#7bcfb7">React + SSG</text></g>
+    <g><circle cx="640" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="640" y="127" font-size="20" font-weight="800" fill="#fff">4</text>
+      <text x="640" y="178" font-size="15" font-weight="700" fill="#fff">Pages</text><text x="640" y="198" font-size="12" fill="#7bcfb7">every language</text></g>
+    <g><circle cx="776" cy="120" r="26" fill="#86600f" stroke="#ecbd47" stroke-width="2"/><text x="776" y="127" font-size="20" font-weight="800" fill="#fff">5</text>
+      <text x="776" y="178" font-size="15" font-weight="700" fill="#fff">SEO / AEO</text><text x="776" y="198" font-size="12" fill="#f3d27a">JSON-LD, llms.txt</text></g>
+    <g><circle cx="912" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="912" y="127" font-size="20" font-weight="800" fill="#fff">6</text>
+      <text x="912" y="178" font-size="15" font-weight="700" fill="#fff">QA</text><text x="912" y="198" font-size="12" fill="#7bcfb7">320 → 1280 px</text></g>
+    <g><circle cx="1048" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="1048" y="127" font-size="20" font-weight="800" fill="#fff">7</text>
+      <text x="1048" y="178" font-size="15" font-weight="700" fill="#fff">Launch</text><text x="1048" y="198" font-size="12" fill="#7bcfb7">free hosting</text></g>
+    <g><circle cx="1184" cy="120" r="26" fill="#0f6253" stroke="#45b397" stroke-width="2"/><text x="1184" y="127" font-size="20" font-weight="800" fill="#fff">8</text>
+      <text x="1184" y="178" font-size="15" font-weight="700" fill="#fff">Handover</text><text x="1184" y="198" font-size="12" fill="#7bcfb7">ops + playbook</text></g>
+  </g>
+  <circle class="dot" cx="96" cy="120" r="7" fill="#ffffff" stroke="#062520" stroke-width="2"/>
+</svg>
